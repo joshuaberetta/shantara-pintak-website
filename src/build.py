@@ -52,6 +52,14 @@ def build_site():
         shutil.copy(resume_file, dest)
         print(f"📄 Copied {resume_file.name} to dist/")
     
+    # Copy profile image to dist if it exists
+    image_file = Path(__file__).parent.parent / 'shantara.jpg'
+    if image_file.exists():
+        import shutil
+        dest = output_file.parent / image_file.name
+        shutil.copy(image_file, dest)
+        print(f"🖼️  Copied {image_file.name} to dist/")
+    
     print(f"✅ Successfully built site to {output_file}")
     return True
 
