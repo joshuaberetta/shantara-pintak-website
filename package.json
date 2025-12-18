@@ -1,0 +1,16 @@
+{
+  "name": "shantara-pintak-website",
+  "version": "1.0.0",
+  "description": "Personal website with YAML-based content system",
+  "scripts": {
+    "dev": "python dev.py",
+    "build": "python build.py",
+    "setup": "pip install -r requirements.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/shantara-pintak-website.git"
+  },
+  "author": "Shantara Pintak",
+  "license": "MIT"
+}
