@@ -22,15 +22,15 @@ Built with a **YAML-based content system** for easy editing, with automated buil
 ### Development Mode (Hot Reloading)
 Run the dev server with automatic rebuilds:
 ```bash
-python dev.py
+python src/dev.py
 ```
 
-The site will be available at `http://localhost:8000` and will automatically rebuild when you edit [content.yaml](content.yaml) or [template.html](template.html).
+The site will be available at `http://localhost:8000` and will automatically rebuild when you edit [src/content.yaml](src/content.yaml) or [src/template.html](src/template.html).
 
 ### Build for Production
 Generate the static site:
 ```bash
-python build.py
+python src/build.py
 ```
 
 The compiled site will be in the `dist/` directory.
@@ -39,7 +39,7 @@ The compiled site will be in the `dist/` directory.
 
 ## 📝 Editing Content
 
-All website content is in **[content.yaml](content.yaml)**. Edit this file to update:
+All website content is in **[src/content.yaml](src/content.yaml)**. Edit this file to update:
 - Personal information (name, tagline, contact details)
 - Focus areas
 - Education history
@@ -64,7 +64,7 @@ hero:
 ## 🎨 Customizing Design
 
 ### Colors & Fonts
-Edit the `colors` and `fonts` sections in [content.yaml](content.yaml):
+Edit the `colors` and `fonts` sections in [src/content.yaml](src/content.yaml):
 ```yaml
 colors:
   sand: "#F5F0E8"
@@ -77,7 +77,7 @@ fonts:
 ```
 
 ### Advanced Styling
-For layout changes, edit [template.html](template.html). It uses Mustache templating syntax:
+For layout changes, edit [src/template.html](src/template.html). It uses Mustache templating syntax:
 - `{{variable}}` - Simple variable substitution
 - `{{#array}}...{{/array}}` - Loop over arrays
 - `{{#object.property}}` - Access nested properties
@@ -123,15 +123,16 @@ If you prefer manual control:
 
 ```
 .
-├── content.yaml              # ✏️ Edit content here!
-├── template.html             # 🎨 HTML template with Mustache syntax
-├── build.py                  # 🔨 Build script (YAML → HTML)
-├── dev.py                    # 🔥 Dev server with hot reload
-├── requirements.txt          # 📦 Python dependencies
+├── src/
+│   ├── content.yaml           # ✏️ Edit content here!
+│   ├── template.html          # 🎨 HTML template with Mustache syntax
+│   ├── build.py               # 🔨 Build script (YAML → HTML)
+│   └── dev.py                 # 🔥 Dev server with hot reload
+├── requirements.txt           # 📦 Python dependencies
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml        # 🚀 GitHub Actions deployment
-├── dist/                     # 📤 Build output (generated)
+│       └── deploy.yml         # 🚀 GitHub Actions deployment
+├── dist/                      # 📤 Build output (generated)
 │   └── index.html
 └── Shantara_Pintak_Resume.pdf
 ```
@@ -165,7 +166,7 @@ The GitHub Actions workflow ([.github/workflows/deploy.yml](.github/workflows/de
 
 ## 🧪 Testing Locally
 
-1. Make changes to [content.yaml](content.yaml)
+1. Make changes to [src/content.yaml](src/content.yaml)
 2. The dev server will automatically rebuild
 3. Refresh your browser to see changes
 4. Once satisfied, commit and push to deploy

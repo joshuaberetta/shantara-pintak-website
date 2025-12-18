@@ -13,9 +13,9 @@ def build_site():
     """Compile the website from YAML content and HTML template."""
     
     # Load content from YAML
-    content_file = Path('content.yaml')
-    template_file = Path('template.html')
-    output_file = Path('dist/index.html')
+    content_file = Path(__file__).parent / 'content.yaml'
+    template_file = Path(__file__).parent / 'template.html'
+    output_file = Path(__file__).parent.parent / 'dist/index.html'
     
     if not content_file.exists():
         print(f"❌ Error: {content_file} not found")
@@ -45,12 +45,12 @@ def build_site():
         f.write(html)
     
     # Copy resume PDF to dist if it exists
-    resume_file = Path('Shantara_Pintak_Resume.pdf')
+    resume_file = Path(__file__).parent.parent / 'Shantara_Pintak_Resume.pdf'
     if resume_file.exists():
         import shutil
         dest = output_file.parent / resume_file.name
         shutil.copy(resume_file, dest)
-        print(f"📄 Copied {resume_file} to dist/")
+        print(f"📄 Copied {resume_file.name} to dist/")
     
     print(f"✅ Successfully built site to {output_file}")
     return True

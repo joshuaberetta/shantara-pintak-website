@@ -17,9 +17,12 @@ from watchdog.events import FileSystemEventHandler
 from build import build_site
 
 
+from pathlib import Path
+
 PORT = 8000
+PROJECT_ROOT = Path(__file__).parent.parent
 WATCH_FILES = ['content.yaml', 'template.html']
-DIST_DIR = 'dist'
+DIST_DIR = str(PROJECT_ROOT / 'dist')
 
 
 class BuildHandler(FileSystemEventHandler):
@@ -80,7 +83,7 @@ def start_watcher():
     """Start the file watcher."""
     event_handler = BuildHandler()
     observer = Observer()
-    observer.schedule(event_handler, path='.', recursive=False)
+    observer.schedule(event_handler, path=str(Path(__file__).parent), recursive=False)
     observer.start()
     return observer
 

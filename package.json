@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Personal website with YAML-based content system",
   "scripts": {
-    "dev": "python dev.py",
-    "build": "python build.py",
+    "dev": "python src/dev.py",
+    "build": "python src/build.py",
     "setup": "pip install -r requirements.txt"
   },
   "repository": {

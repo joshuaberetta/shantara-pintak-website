@@ -33,14 +33,14 @@ echo ""
 
 # Build the site
 echo "🔨 Building site..."
-.venv/bin/python build.py
+.venv/bin/python src/build.py
 
 echo ""
 echo "🎉 Setup complete!"
 echo ""
 echo "Next steps:"
-echo "  • Run dev server:    python dev.py"
-echo "  • Build for prod:    python build.py"
-echo "  • Edit content:      content.yaml"
+echo "  • Run dev server:    python src/dev.py"
+echo "  • Build for prod:    python src/build.py"
+echo "  • Edit content:      src/content.yaml"
 echo "  • View local site:   open dist/index.html"
 echo ""
