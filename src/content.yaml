@@ -39,13 +39,13 @@ education:
     institution: "Uppsala Universitet"
     degree: "M.A. Theology — Conflict, Peace-building, and Religion"
   
-  - start_date: 
-    end_date: 
+  - start_date: "2016"
+    end_date: "2020"
     institution: "Washington State University"
     degree: "B.A. Philosophy: Comparative Religious Studies"
   
-  - start_date: 
-    end_date: 
+  - start_date: "2015"
+    end_date: "2015"
     institution: "University of Virginia"
     degree: "Tibetan Language Summer Intensive Program"
 
