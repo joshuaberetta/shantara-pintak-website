@@ -29,12 +29,12 @@ focus_areas:
     description: "Tibetan language training, Arabic media experience at Al Jazeera and Thomson Reuters, and work across diverse cultural contexts."
 
 education:
-  - start_date: 
+  - start_date: "2024"
     end_date: "2026"
     institution: "NOHA Erasmus Mundus Joint Degree"
     degree: "M.Sc. International Humanitarian Action — University College Dublin & Uppsala University"
   
-  - start_date: 
+  - start_date: "2024"
     end_date: "2025"
     institution: "Uppsala Universitet"
     degree: "M.A. Theology — Conflict, Peace-building, and Religion"
@@ -45,7 +45,7 @@ education:
     degree: "B.A. Philosophy: Comparative Religious Studies"
   
   - start_date: 
-    end_date: ""
+    end_date: 
     institution: "University of Virginia"
     degree: "Tibetan Language Summer Intensive Program"
 
@@ -54,18 +54,18 @@ experience:
   positions:
     - organization: "Red Cross of Timor-Leste"
       role: "Planning, Monitoring, Evaluation, Reporting Intern"
-      start_date: 
-      end_date: 
+      start_date: "August 2025"
+      end_date: "December 2025"
     
     - organization: "One Ummah Foundation"
-      role: "Content Writer"
-      start_date: 
-      end_date: 
+      role: "Freelance Content Writer"
+      start_date: "March 2024"
+      end_date: "December 2024"
     
     - organization: "Rebuilding Alliance"
-      role: "Staff Writer"
-      start_date: 
-      end_date: 
+      role: "Freelance Content Writer"
+      start_date: "January 2024"
+      end_date: "March 2024"
 
     - organization: "Thomas S. Foley Institute"
       role: "Public Policy Intern"
