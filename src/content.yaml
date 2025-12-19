@@ -52,8 +52,9 @@ education:
 experience:
   description: "A diverse background spanning humanitarian operations, journalism, policy research, and community engagement."
   positions:
-    - organization: "Red Cross of Timor-Leste"
+    - organization: "Red Cross of Timor-Leste (Cruz Vermelha de Timor-Leste)"
       role: "Planning, Monitoring, Evaluation, Reporting Intern"
+      responsibilities: "grant writing | Annual Report 
       start_date: "August 2025"
       end_date: "December 2025"
     
@@ -69,28 +70,28 @@ experience:
 
     - organization: "Thomas S. Foley Institute"
       role: "Public Policy Intern"
-      start_date: 
-      end_date: 
-      
+      start_date: "January 2016"
+      end_date: "June 2016"
+ 
     - organization: "Al Jazeera Arabic"
       role: "Intern"
-      start_date: 
-      end_date: 
-    
-    - organization: "Arabic Knowledge@Wharton"
-      role: "New Media Correspondent"
-      start_date: 
-      end_date:
-    
-    - organization: "Thomson Reuters"
-      role: "Islamic Finance Reporting Intern"
-      start_date: 
-      end_date: 
+      start_date: "August 2013"
+      end_date: "December 2013"
     
     - organization: "Women's Campaign International"
       role: "Video Editor"
-      start_date: 
-      end_date:  
+      start_date: "May 2012"
+      end_date: "June 2012"
+    
+    - organization: "Arabic Knowledge@Wharton"
+      role: "New Media Correspondent"
+      start_date: "August 2011"
+      end_date: "July 2012"
+    
+    - organization: "Thomson Reuters"
+      role: "Islamic Finance Reporting Intern"
+      start_date: "July 2011"
+      end_date: "September 2011"
 
 volunteer:
   description: "Community engagement in Nepal with youth empowerment, women's organizations, and Buddhist monastic communities — including Sahayogi Samaj Orphanage, Himalayan Society for Youth & Women Empowerment, and Tamang Lungtog Choekhorling Gompa."
