@@ -7,10 +7,10 @@ meta:
   
 hero:
   name: "Shantara Pintak"
-  tagline: "Humanitarian Action · Peacebuilding · Religious Studies"
+  tagline: "Humanitarian Action · Peacebuilding · Conflict & Religion"
   intro: |
     Graduate student in International Humanitarian Action with expertise spanning 
-    conflict and religion, peacebuilding, and cross-cultural communication. 
+    cross-cultural communication, comparative religious studies, conflict and peacebuilding. 
     Bringing together academic rigor and field experience from Timor-Leste to the UAE.
   
 contact:
@@ -29,68 +29,68 @@ focus_areas:
     description: "Tibetan language training, Arabic media experience at Al Jazeera and Thomson Reuters, and work across diverse cultural contexts."
 
 education:
-  - start_date: "2024"
+  - start_date: 
     end_date: "2026"
     institution: "NOHA Erasmus Mundus Joint Degree"
     degree: "M.Sc. International Humanitarian Action — University College Dublin & Uppsala University"
   
-  - start_date: "2025"
+  - start_date: 
     end_date: "2025"
     institution: "Uppsala Universitet"
     degree: "M.A. Theology — Conflict, Peace-building, and Religion"
   
-  - start_date: "2015"
-    end_date: "2019"
+  - start_date: 
+    end_date: 
     institution: "Washington State University"
     degree: "B.A. Philosophy: Comparative Religious Studies"
   
-  - start_date: "Summer 2017"
+  - start_date: 
     end_date: ""
     institution: "University of Virginia"
-    degree: "Tibetan Language Summer Intensive"
+    degree: "Tibetan Language Summer Intensive Program"
 
 experience:
   description: "A diverse background spanning humanitarian operations, journalism, policy research, and community engagement."
   positions:
-    - organization: "Red Cross Timor-Leste"
-      role: "PMER Delegate"
-      start_date: "2023"
-      end_date: "2024"
-    
-    - organization: "Al Jazeera Arabic"
-      role: "Journalist"
-      start_date: "2022"
-      end_date: "2023"
-    
-    - organization: "Thomson Reuters"
-      role: "Media Analyst"
-      start_date: "2021"
-      end_date: "2022"
-    
-    - organization: "Women's Campaign International"
-      role: "Program Associate"
-      start_date: "2020"
-      end_date: "2021"
-    
-    - organization: "Rebuilding Alliance"
-      role: "Research Assistant"
-      start_date: "2019"
-      end_date: "2020"
-    
-    - organization: "Arabic Knowledge@Wharton"
-      role: "Translator"
-      start_date: "2018"
-      end_date: "2019"
-    
-    - organization: "Thomas S. Foley Institute"
-      role: "Research Fellow"
-      start_date: "2017"
-      end_date: "2018"
+    - organization: "Red Cross of Timor-Leste"
+      role: "Planning, Monitoring, Evaluation, Reporting Intern"
+      start_date: 
+      end_date: 
     
     - organization: "One Ummah Foundation"
-      role: "Community Organizer"
-      start_date: "2016"
-      end_date: "2017"
+      role: "Content Writer"
+      start_date: 
+      end_date: 
+    
+    - organization: "Rebuilding Alliance"
+      role: "Staff Writer"
+      start_date: 
+      end_date: 
+
+    - organization: "Thomas S. Foley Institute"
+      role: "Public Policy Intern"
+      start_date: 
+      end_date: 
+      
+    - organization: "Al Jazeera Arabic"
+      role: "Intern"
+      start_date: 
+      end_date: 
+    
+    - organization: "Arabic Knowledge@Wharton"
+      role: "New Media Correspondent"
+      start_date: 
+      end_date:
+    
+    - organization: "Thomson Reuters"
+      role: "Islamic Finance Reporting Intern"
+      start_date: 
+      end_date: 
+    
+    - organization: "Women's Campaign International"
+      role: "Video Editor"
+      start_date: 
+      end_date:  
 
 volunteer:
   description: "Community engagement in Nepal with youth empowerment, women's organizations, and Buddhist monastic communities — including Sahayogi Samaj Orphanage, Himalayan Society for Youth & Women Empowerment, and Tamang Lungtog Choekhorling Gompa."
