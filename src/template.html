@@ -247,6 +247,33 @@
             font-weight: 300;
         }
 
+        .responsibilities {
+            margin-top: 0.75rem;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .responsibilities:not(:has(li)) {
+            display: none;
+        }
+
+        .responsibilities li {
+            font-size: 0.85rem;
+            color: var(--color-muted);
+            font-weight: 300;
+            padding-left: 1.2rem;
+            position: relative;
+            margin-bottom: 0.4rem;
+        }
+
+        .responsibilities li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-terracotta);
+            font-weight: 600;
+        }
+
         /* Experience highlights */
         .experience-tags {
             display: flex;
@@ -445,6 +472,11 @@
                     <div class="edu-details">
                         <h4>{{organization}}</h4>
                         <p>{{role}}</p>
+                        <ul class="responsibilities">
+                            {{#responsibilities}}
+                            <li>{{.}}</li>
+                            {{/responsibilities}}
+                        </ul>
                     </div>
                 </div>
                 {{/experience.positions}}
