@@ -103,6 +103,25 @@ experience:
 volunteer:
   description: "Community engagement in Nepal with youth empowerment, women's organizations, and Buddhist monastic communities — including Sahayogi Samaj Orphanage, Himalayan Society for Youth & Women Empowerment, and Tamang Lungtog Choekhorling Gompa."
 
+# Work samples
+# Drop a PDF into assets/work-samples/ then add an entry below.
+#   title: the text shown on the site
+#   file:  the file name inside assets/work-samples/ (spaces are fine)
+work_samples:
+  description: "A selection of published and professional writing. Click a title to download the PDF."
+  items:
+    - title: "Trust Over Templates Shantara Pintak"
+      file: "Trust Over Templates Shantara Pintak.pdf"
+      
+    - title: "Arabic Knowledge@Wharton"
+      file: "Arabic Knowledge@Wharton.pdf"
+
+    - title: "Public Policy Event Write Ups"
+      file: "Public Policy Event Write Ups.pdf"
+
+    - title: "Reuters"
+      file: "Reuters.pdf"
+
 cta:
   title: "Want the full picture?"
   description: "Download my complete résumé for detailed experience and qualifications."
@@ -110,7 +129,7 @@ cta:
   resume_file: "Shantara_Pintak_Resume.pdf"
 
 footer:
-  copyright: "© 2025 Shantara Pintak"
+  copyright: "© 2026 Shantara Pintak"
 
 # Design configuration
 colors:

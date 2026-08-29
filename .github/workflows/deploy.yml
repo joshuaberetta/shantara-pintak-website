@@ -35,11 +35,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
+    # --strict fails the build if content.yaml references an asset that is
+    # missing or mis-cased, rather than deploying a broken link. The runner's
+    # filesystem is case-sensitive; macOS is not, so this is the catch-all.
     - name: Build site
-      run: python src/build.py
-    
+      run: python src/build.py --strict
+
     - name: List dist contents
-      run: ls -la dist/
+      run: find dist -type f -exec ls -lh {} +
     
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3

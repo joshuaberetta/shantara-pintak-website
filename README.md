@@ -44,11 +44,26 @@ All website content is in **[src/content.yaml](src/content.yaml)**. Edit this fi
 - Focus areas
 - Education history
 - Work experience
+- Work samples (downloadable PDFs)
 - Volunteer work
 - Colors and fonts
 - CTA button text
 
 No HTML knowledge required! The build system automatically compiles YAML content into HTML.
+
+### Adding a Work Sample
+1. Drop the PDF into `assets/work-samples/`
+2. Add an entry under `work_samples.items` in [src/content.yaml](src/content.yaml):
+   ```yaml
+   work_samples:
+     items:
+       - title: "Title shown on the site"
+         file: "My Sample.pdf"   # file name inside assets/work-samples/
+   ```
+
+`file` is just the file name — the build handles the path and URL escaping, so
+spaces and special characters are fine. Clicking a title downloads the PDF. The
+build prints a warning if a listed file is missing from `assets/work-samples/`.
 
 ### Example Edit
 ```yaml
@@ -113,9 +128,9 @@ The workflow runs on every push to `main` and automatically:
 ### Manual Deployment
 
 If you prefer manual control:
-1. Build the site locally: `python build.py`
-2. Copy the contents of `dist/` to your web server
-3. Also copy `Shantara_Pintak_Resume.pdf` to the same directory
+1. Build the site locally: `python src/build.py`
+2. Copy the contents of `dist/` to your web server — the build already places the
+   profile photo, résumé, and work samples in `dist/assets/`
 
 ---
 
@@ -128,13 +143,17 @@ If you prefer manual control:
 │   ├── template.html          # 🎨 HTML template with Mustache syntax
 │   ├── build.py               # 🔨 Build script (YAML → HTML)
 │   └── dev.py                 # 🔥 Dev server with hot reload
+├── assets/                    # 🖼️ Static files, copied to dist/assets/
+│   ├── shantara.jpg           #    Profile photo
+│   ├── Shantara_Pintak_Resume.pdf
+│   └── work-samples/          # 📄 Work sample PDFs
 ├── requirements.txt           # 📦 Python dependencies
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml         # 🚀 GitHub Actions deployment
-├── dist/                      # 📤 Build output (generated)
-│   └── index.html
-└── Shantara_Pintak_Resume.pdf
+└── dist/                      # 📤 Build output (generated)
+    ├── index.html
+    └── assets/
 ```
 
 ---

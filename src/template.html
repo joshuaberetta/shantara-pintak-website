@@ -178,6 +178,30 @@
             background: var(--color-terracotta);
         }
 
+        /* Heading anchors */
+        .heading-anchor {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .heading-anchor::after {
+            content: '#';
+            margin-left: 0.4em;
+            color: var(--color-terracotta);
+            font-weight: 300;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .heading-anchor:hover::after,
+        .heading-anchor:focus-visible::after {
+            opacity: 0.7;
+        }
+
+        :target {
+            scroll-margin-top: 2rem;
+        }
+
         /* Focus Areas */
         .focus-grid {
             display: grid;
@@ -272,6 +296,55 @@
             left: 0;
             color: var(--color-terracotta);
             font-weight: 600;
+        }
+
+        /* Work Samples */
+        .samples-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .samples-list a {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 1rem 1.25rem;
+            background: var(--color-cream);
+            border-left: 3px solid var(--color-terracotta);
+            border-radius: 4px;
+            color: var(--color-deep);
+            text-decoration: none;
+            font-weight: 400;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+        }
+
+        .samples-list a:hover,
+        .samples-list a:focus-visible {
+            transform: translateX(4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            color: var(--color-terracotta);
+        }
+
+        .samples-list svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            color: var(--color-terracotta);
+        }
+
+        .samples-list span {
+            flex: 1;
+        }
+
+        .samples-list em {
+            font-style: normal;
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            font-weight: 500;
+            color: var(--color-muted);
         }
 
         /* Experience highlights */
@@ -401,8 +474,8 @@
     <div class="bg-pattern"></div>
 
     <header>
-        <img src="shantara.jpg" alt="Shantara Pintak" class="profile-image">
-        <h1 class="name">{{hero.name}}</h1>
+        <img src="{{hero.image_url}}" alt="{{hero.name}}" class="profile-image">
+        <h1 class="name" id="top"><a class="heading-anchor" href="#top">{{hero.name}}</a></h1>
         <p class="tagline">{{hero.tagline}}</p>
         <p class="intro">{{hero.intro}}</p>
         <div class="contact-links">
@@ -434,7 +507,7 @@
 
     <main>
         <section class="container">
-            <h2 class="section-title">Areas of Focus</h2>
+            <h2 class="section-title" id="focus"><a class="heading-anchor" href="#focus">Areas of Focus</a></h2>
             <div class="focus-grid">
                 {{#focus_areas}}
                 <div class="focus-card">
@@ -446,7 +519,7 @@
         </section>
 
         <section class="container">
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title" id="education"><a class="heading-anchor" href="#education">Education</a></h2>
             <div class="education-list">
                 {{#education}}
                 <div class="edu-item">
@@ -461,7 +534,7 @@
         </section>
 
         <section class="container">
-            <h2 class="section-title">Experience Highlights</h2>
+            <h2 class="section-title" id="experience"><a class="heading-anchor" href="#experience">Experience Highlights</a></h2>
             <p style="color: var(--color-muted); font-weight: 300; margin-bottom: 1.5rem;">
                 {{experience.description}}
             </p>
@@ -484,7 +557,27 @@
         </section>
 
         <section class="container">
-            <h2 class="section-title">Volunteer Work</h2>
+            <h2 class="section-title" id="work-samples"><a class="heading-anchor" href="#work-samples">Work Samples</a></h2>
+            <p style="color: var(--color-muted); font-weight: 300; margin-bottom: 1.5rem;">
+                {{work_samples.description}}
+            </p>
+            <ul class="samples-list">
+                {{#work_samples.items}}
+                <li>
+                    <a href="{{url}}" download>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <span>{{title}}</span>
+                        <em>PDF</em>
+                    </a>
+                </li>
+                {{/work_samples.items}}
+            </ul>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title" id="volunteer"><a class="heading-anchor" href="#volunteer">Volunteer Work</a></h2>
             <p style="color: var(--color-muted); font-weight: 300;">
                 {{volunteer.description}}
             </p>
@@ -492,9 +585,9 @@
     </main>
 
     <section class="cta-section">
-        <h2>{{cta.title}}</h2>
+        <h2 id="resume"><a class="heading-anchor" href="#resume">{{cta.title}}</a></h2>
         <p>{{cta.description}}</p>
-        <a href="{{cta.resume_file}}" download class="download-btn">
+        <a href="{{cta.resume_url}}" download class="download-btn">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
             </svg>
