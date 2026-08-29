@@ -244,11 +244,29 @@
             gap: 1.5rem;
         }
 
+        /* Fallback: a fixed date column keeps rows aligned where subgrid is
+           unavailable, since each item is otherwise its own grid and sizes its
+           date column independently (the staggered look). */
         .edu-item {
             display: grid;
-            grid-template-columns: auto 1fr;
+            grid-template-columns: 12.5rem 1fr;
             gap: 1.5rem;
             align-items: start;
+        }
+
+        /* Preferred: one shared grid, so the date column sizes once to the
+           longest date in the list and every row lines up — no magic number,
+           and each list sizes to its own content. */
+        @supports (grid-template-columns: subgrid) {
+            .education-list {
+                display: grid;
+                grid-template-columns: auto 1fr;
+            }
+
+            .edu-item {
+                grid-column: 1 / -1;
+                grid-template-columns: subgrid;
+            }
         }
 
         .edu-year {
@@ -454,6 +472,12 @@
 
         /* Responsive */
         @media (max-width: 600px) {
+            /* Stack date over details — revert to the flex fallback so the
+               shared column grid above does not apply. */
+            .education-list {
+                display: flex;
+            }
+
             .edu-item {
                 grid-template-columns: 1fr;
                 gap: 0.5rem;
