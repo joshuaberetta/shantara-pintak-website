@@ -12,7 +12,13 @@ from urllib.parse import quote
 
 # Static files live in assets/ and are copied to dist/assets/ verbatim.
 ASSETS_DIR_NAME = 'assets'
-WORK_SAMPLES_DIR_NAME = 'work-samples'
+
+# Sections in content.yaml whose items name a PDF: content key -> (assets
+# subdirectory, label used in warnings).
+SAMPLE_SECTIONS = {
+    'academic_research': ('research-samples', 'Research sample'),
+    'work_samples': ('work-samples', 'Work sample'),
+}
 
 
 def asset_url(*parts):
@@ -59,11 +65,11 @@ def resolve_asset_urls(content, assets_dir):
         if problem := missing_asset(assets_dir, resume_file):
             problems.append(f"Résumé not found: {problem}")
 
-    samples = (content.get('work_samples') or {}).get('items') or []
-    for sample in samples:
-        sample['url'] = asset_url(WORK_SAMPLES_DIR_NAME, sample['file'])
-        if problem := missing_asset(assets_dir, WORK_SAMPLES_DIR_NAME, sample['file']):
-            problems.append(f"Work sample not found: {problem}")
+    for section, (subdir, label) in SAMPLE_SECTIONS.items():
+        for sample in (content.get(section) or {}).get('items') or []:
+            sample['url'] = asset_url(subdir, sample['file'])
+            if problem := missing_asset(assets_dir, subdir, sample['file']):
+                problems.append(f"{label} not found: {problem}")
 
     return problems
 

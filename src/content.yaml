@@ -103,6 +103,16 @@ experience:
 volunteer:
   description: "Community engagement in Nepal with youth empowerment, women's organizations, and Buddhist monastic communities — including Sahayogi Samaj Orphanage, Himalayan Society for Youth & Women Empowerment, and Tamang Lungtog Choekhorling Gompa."
 
+# Academic research
+# Drop a PDF into assets/research-samples/ then add an entry below.
+#   title: the text shown on the site
+#   file:  the file name inside assets/research-samples/ (spaces are fine)
+academic_research:
+  description: "Thesis and scholarly work. Click a title to download the PDF."
+  items:
+    - title: "NOHA Master's Thesis"
+      file: "Final Thesis Shantara.pdf"
+
 # Work samples
 # Drop a PDF into assets/work-samples/ then add an entry below.
 #   title: the text shown on the site

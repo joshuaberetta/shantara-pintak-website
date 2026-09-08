@@ -44,6 +44,7 @@ All website content is in **[src/content.yaml](src/content.yaml)**. Edit this fi
 - Focus areas
 - Education history
 - Work experience
+- Academic research (downloadable PDFs)
 - Work samples (downloadable PDFs)
 - Volunteer work
 - Colors and fonts
@@ -51,9 +52,11 @@ All website content is in **[src/content.yaml](src/content.yaml)**. Edit this fi
 
 No HTML knowledge required! The build system automatically compiles YAML content into HTML.
 
-### Adding a Work Sample
-1. Drop the PDF into `assets/work-samples/`
-2. Add an entry under `work_samples.items` in [src/content.yaml](src/content.yaml):
+### Adding a Work Sample or Research Paper
+1. Drop the PDF into `assets/work-samples/` (or `assets/research-samples/` for
+   academic research)
+2. Add an entry under `work_samples.items` (or `academic_research.items`) in
+   [src/content.yaml](src/content.yaml):
    ```yaml
    work_samples:
      items:
@@ -63,7 +66,7 @@ No HTML knowledge required! The build system automatically compiles YAML content
 
 `file` is just the file name — the build handles the path and URL escaping, so
 spaces and special characters are fine. Clicking a title downloads the PDF. The
-build prints a warning if a listed file is missing from `assets/work-samples/`.
+build prints a warning if a listed file is missing from its assets directory.
 
 ### Example Edit
 ```yaml
@@ -146,6 +149,7 @@ If you prefer manual control:
 ├── assets/                    # 🖼️ Static files, copied to dist/assets/
 │   ├── shantara.jpg           #    Profile photo
 │   ├── Shantara_Pintak_Resume.pdf
+│   ├── research-samples/      # 📄 Academic research PDFs
 │   └── work-samples/          # 📄 Work sample PDFs
 ├── requirements.txt           # 📦 Python dependencies
 ├── .github/
